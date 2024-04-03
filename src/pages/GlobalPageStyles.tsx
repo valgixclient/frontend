@@ -1,4 +1,5 @@
 import { styled } from 'styled-components'
+import { device } from '@/vendor/devices'
 
 export const PageStyle = styled.div`
 position: absolute;
@@ -10,8 +11,25 @@ border-radius: 8px;
 height: 95%;
 width: 90%;
 overflow: auto;
--webkit-animation: slide-in-blurred-top 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-animation: slide-in-blurred-top 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+-webkit-animation: slide-in-blurred-top 0.1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+animation: slide-in-blurred-top 0.1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+@media ${device.laptopL} {
+        width: 88%;
+}
+
+@media ${device.laptop} {
+        width: 85%;
+}
+
+@media ${device.tablet} {
+        width: 80%;
+}
+
+@media ${device.mobileL} {
+        left: 10px;
+        width: 92%;
+}
 
 @-webkit-keyframes slide-in-blurred-top {
     0% {
@@ -19,8 +37,8 @@ animation: slide-in-blurred-top 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) bo
                 transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
         -webkit-transform-origin: 50% 0%;
                 transform-origin: 50% 0%;
-        -webkit-filter: blur(100px);
-                filter: blur(100px);
+        -webkit-filter: blur(200px);
+                filter: blur(200px);
         opacity: 0;
     }
     100% {
@@ -39,8 +57,8 @@ animation: slide-in-blurred-top 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) bo
                 transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
         -webkit-transform-origin: 50% 0%;
                 transform-origin: 50% 0%;
-        -webkit-filter: blur(100px);
-                filter: blur(100px);
+        -webkit-filter: blur(200px);
+                filter: blur(200px);
         opacity: 0;
     }
     100% {

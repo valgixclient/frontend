@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import { PageStyle } from './GlobalPageStyles'
+import Button from '@/components/ui/button/Button'
+import Icon from '@/components/ui/icon/Icon'
 
 const WalletAmountBlock = styled.div`
 position: relative;
@@ -21,6 +23,7 @@ min-width: 100%;
 `
 
 const WalletAmountButtons = styled.div`
+
 `
 
 export default function WalletPage() {
@@ -28,13 +31,16 @@ export default function WalletPage() {
         <>
             <PageStyle>
                 <WalletAmountBlock>
-                    <WalletAmountText>0.00$</WalletAmountText>
+                    <WalletAmountText>254.00$</WalletAmountText>
                     <WalletAmountButtons>
-                        
+                        <Button style={{margin: '0px 4px'}} styleType='primary'><Icon size={12} name="arrow_downward" /> Add balance</Button>
+                        <Button style={{margin: '0px 4px'}} styleType='second'><Icon size={12} name="arrow_upward" /> Send money</Button>
                     </WalletAmountButtons>
                 </WalletAmountBlock>
 
                 <Division />
+
+                <h1>Logs at here..</h1>
             </PageStyle>
         </>
     )
