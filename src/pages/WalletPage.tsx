@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { PageStyle } from './GlobalPageStyles'
 import Button from '@/components/ui/button/Button'
 import Icon from '@/components/ui/icon/Icon'
+import { device } from '@/vendor/devices'
 
 const WalletAmountBlock = styled.div`
 position: relative;
@@ -26,6 +27,60 @@ const WalletAmountButtons = styled.div`
 
 `
 
+const WalletLogsBlock = styled.div`
+position: relative;
+user-select: none;
+padding: 0px 35px;
+display: flex;
+flex-direction: column;
+align-items: center;
+`
+
+const WalletLogsItems = styled.div`
+position: relative;
+display: flex;
+align-items: center;
+margin: 10px;
+float: left;
+margin-bottom: 25px;
+`
+
+const WalletLogsItemText = styled.span`
+font-size: 24px;
+margin-left: 20px;
+float: left;
+display: flex;
+flex-direction: column;
+`
+
+const WalletLogsItemTime = styled.small`
+font-size: 14px;
+color: grey;
+`
+
+const WalletLogsItemPriceAdd = styled.span`
+font-size: 24px;
+margin-left: 20px;
+color: #51FF3C;
+opacity: 0.5;
+`
+
+const WalletLogsItemPriceSend = styled.span`
+font-size: 24px;
+margin-left: 20px;
+color: #FF3C3C;
+opacity: 0.5;
+`
+
+const WalletProfileImages = styled.img`
+border-radius: 50%;
+width: 56px;
+
+@media ${device.mobileL} {
+    display: none;
+}
+`
+
 export default function WalletPage() {
     return (
         <>
@@ -40,7 +95,34 @@ export default function WalletPage() {
 
                 <Division />
 
-                <h1>Logs at here..</h1>
+                <WalletLogsBlock>
+                    <WalletLogsItems>
+                        <WalletProfileImages src="https://wallpapers.com/images/featured/cool-profile-picture-87h46gcobjl5e4xu.jpg" alt="" />
+                        <WalletLogsItemText>
+                            Cavid Xakin
+                            <WalletLogsItemTime>03.04.2024 at 12:51 GMT+4</WalletLogsItemTime>
+                        </WalletLogsItemText>
+                        <WalletLogsItemPriceAdd>+200.00$</WalletLogsItemPriceAdd>
+                    </WalletLogsItems>
+
+                    <WalletLogsItems>
+                        <WalletProfileImages src="https://wallpapers.com/images/featured/cool-profile-picture-87h46gcobjl5e4xu.jpg" alt="" />
+                        <WalletLogsItemText>
+                            Cavid Xakin
+                            <WalletLogsItemTime>03.04.2024 at 12:51 GMT+4</WalletLogsItemTime>
+                        </WalletLogsItemText>
+                        <WalletLogsItemPriceAdd>+54.00$</WalletLogsItemPriceAdd>
+                    </WalletLogsItems>
+
+                    <WalletLogsItems>
+                        <WalletProfileImages src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=338&ext=jpg&ga=GA1.1.1224184972.1712016000&semt=sph" alt="" />
+                        <WalletLogsItemText>
+                            John Smith
+                            <WalletLogsItemTime>23.02.2024 at 12:51 GMT+4</WalletLogsItemTime>
+                        </WalletLogsItemText>
+                        <WalletLogsItemPriceSend>-12.00$</WalletLogsItemPriceSend>
+                    </WalletLogsItems>
+                </WalletLogsBlock>
             </PageStyle>
         </>
     )
