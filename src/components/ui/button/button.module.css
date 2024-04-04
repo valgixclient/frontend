@@ -3,12 +3,12 @@
     cursor: pointer;
     border-radius: 8px;
     border: none;
-    background: var(--primary-color);
+    background: var(--primary2-color);
     color: white;
 }
 
 .primary:hover {
-    background: var(--second-color);
+    background: var(--second2-color);
 }
 
 .second {
